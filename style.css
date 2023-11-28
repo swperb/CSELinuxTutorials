@@ -31,6 +31,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: space-around;
   }
 
   li {
@@ -47,9 +48,13 @@ body {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 0%;
     background-color: #5D1725;
     border: ipx solid #333;
+  }
+
+  ul li {
+    position: relative;
   }
 
   li:hover > ul {
@@ -58,10 +63,19 @@ body {
   }
 
   ul ul li {
-    width: 200px;
+    width: 150px;
     margin: 0;
     padding: 10px;
     border-top: ipx solid #555;
+  }
+
+  ul ul ul {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 75%;
+    background-color: #5D1725;
+    border: ipx solid #333;
   }
 
   input[type="text"] {
