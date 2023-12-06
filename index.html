@@ -9,7 +9,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap" rel="stylesheet">
+
 
 
     <script src="index.js"></script>
@@ -67,14 +68,14 @@
           </ul>
         </li>
         <li>
-          <a href="topics">Topics</a>
+          <a href="#" onclick="return false;">Topics</a>
           <ul>
             <li><a href="virtualmachines">Virtual Machines</a></li>
             <li><a href="wsl">Windows Subsystem for Linux (WSL)</a></li>
           </ul>
         </li>
         <li>
-          <a href="linux">Linux</a>
+          <a href="#" onclick="return false;">Linux</a>
           <ul>
             <li><a href="distros">Distributions</a></li>
             <li><a href="diskpartition">Disk Partitioning</a></li>
@@ -88,29 +89,96 @@
 
       <div class="search-container">
         <form role="search" method="get">
-          <input type="text" placeholder="Search">
-          <input type="submit" value="Search">
+          <input type="text" placeholder="Search" id="searchInput" onkeyup="search()">
+          <div id="searchResults" class="search-results-dropdown"></div>
         </form>
       </div>
 
       
     </nav>
 
+
+
    
 
+<div class="main-container">
 
-    <main>
+  <div class="left-container">
+    <div class="carousel">
+      <div class="carousel-slides">
+          <div class="slide active">
+              <img src="images/penguin-159784_1280.png">
+              <div class="carousel-caption">
+                <h2>Learn Linux here!</h2>
+              </div>
+          </div>
+          <div class="slide">
+              <img src="images/code-1839406_1280.jpg">
+              <div class="carousel-caption">
+                <h2>Learn how to set up an IDE!</h2>
+              </div>
+          </div>
 
-      <article>
-        <h2>Our Mission</h2>
+      </div>
+      <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
 
+    </div>
+    
+    <div class="welcome-container">
+      <h2>Welcome</h2>
+  
+      <p>
+        Thank you for visiting the CSE/Linux Resources website. This is a website dedicated to students who want to 
+        improve their Computer Science & Engineering learning outside of the classroom by reinforcing topics covered in lectures,
+        researching new languages and topics, and obtaining industry skills. Through the usage of this website, students can feel
+        prepared and excited to begin their careers and succeed in the workforce.
+      </p>
+    </div>
+
+  </div>
+
+
+  
+
+  
+
+  <aside class="sidebar">
+      <div class="quick-links">
+          <h3>Quick Links</h3>
+          <ul>
+              <li><a href="https://cse.msstate.edu" target="_blank">CSE Department</a></li>
+              <li><a href="https://canvas.msstate.edu" target="_blank">Canvas</a></li>
+              <li><a href="https://my.msstate.edu" target="_blank">myState</a></li>
+
+          </ul>
+      </div>
+      <div class="contact-us">
+          <h3>Contact Us</h3>
+          <p>Department of Computer Science and Engineering<br>
+              665 George Perry Street<br>
+              300 Butler Hall<br>
+              Box 9637<br>
+              Mississippi State, MS 39762<br>
+              Email: <a href="mailto:office@cse.msstate.edu">office@cse.msstate.edu</a><br>
+              Phone: (662) 325-2756
+          </p>
+      </div>
+      <div class="about-container">
+        <h3>About</h3>
         <p>
-          This is a website dedicated to the resource gathering for classes within the CSE department at MSU.
+          As the creator of this website, my vision was to enhance the learning experience for CSE students here at MSU. The goal was and
+          still is to fill in the gaps left from classes due to strict college schedules and offer supplemental material to enhance students'
+          performance, not only in the classroom, but in personal programming experiences as well.
         </p>
-      </article>
-    </main>
+      </div>
+  </aside>
 
-  </body>
+</div>
+
+
+
+</body>
 
 
 </html>

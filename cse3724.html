@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>CSE/Linux Resources</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap" rel="stylesheet">
+
+
+
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="cse3724.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  </head>
+  
+  
+  <body>
+    <header>
+      <h1>CSE/Linux Resources</h1>
+    </header>
+	  
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="#" onclick="return false;">Classes</a>
+          <ul>
+            <li>
+              <a href="#" onclick="return false;">CSE 1000-1999</a>
+              <ul>
+                <li><a href="cse1233.html">CSE 1233: Programming in C</a></li>
+                <li><a href="cse1284.html">CSE 1284: Intro to Programming</a></li>
+                <li><a href="cse1384.html">CSE 1384: Intermediate Programming</a></li>
+              </ul>
+            </li>      
+
+
+            <li>
+              <a href="#" onclick="return false;">CSE 2000-2999</a>
+              <ul>
+                <li><a href="cse2213.html">CSE 2213: Methods and Tools in SW Dev</a></li>
+                <li><a href="cse2383.html">CSE 2383: Data Structures</a></li>
+                <li><a href="cse2813.html">CSE 2813: Discrete Structures</a></li>
+              </ul>
+
+            </li>
+
+            <li>
+              <a href="#" onclick="return false;">CSE 3000-3999</a>
+              <ul>
+                <li><a href="cse3724.html">CSE 3724: Computer Organization</a></li>
+              </ul>
+            </li>
+            
+            <li>
+              <a href="#" onclick="return false;">CSE 4000-4999</a>
+              <ul>
+
+              </ul>
+            </li>  
+
+          </ul>
+        </li>
+        <li>
+          <a href="#" onclick="return false;">Topics</a>
+          <ul>
+            <li><a href="virtualmachines">Virtual Machines</a></li>
+            <li><a href="wsl">Windows Subsystem for Linux (WSL)</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" onclick="return false;">Linux</a>
+          <ul>
+            <li><a href="distros">Distributions</a></li>
+            <li><a href="diskpartition">Disk Partitioning</a></li>
+            <li><a href="bootableusb">Creating a Bootable USB</a></li>
+          </ul>
+        </li>
+      </ul>
+
+
+
+
+      <div class="search-container">
+        <form role="search" method="get">
+          <input type="text" placeholder="Search" id="searchInput" onkeyup="search()">
+          <div id="searchResults" class="search-results-dropdown"></div>
+        </form>
+      </div>
+
+      
+    </nav>
+
+
+    <div class="main-container">
+        <div class="left-container">
+          
+          <div class="class-page-container">
+            <div class="class-top-container">
+              <section class="class-header">
+                <h1>CSE 3724: Computer Organization</h1>
+                <p>Computer Organization is a course designed to introduce students to the physical architecure of a computer, how it thinks and reasons,
+                    as well as how it processes human input. In this course, students will learn about the underlying circuitry of a Central Processing Unit (CPU),
+                    the processing and understanding of binary data, and the logical circuitry made up by the physical components of a computer. The students will
+                    have the opportunity to program an actual CPU through the Assembly language, as well as learn how high-level programming languages are processed
+                    down to machine code.
+                </p>
+              </section>    
+    
+    
+              <section class="instructor-info">
+                <h2>Instructor Information</h2>
+                <p>Devin Neal</p>
+                <p>Office: Butler 204</p>
+                <p>Email: <a href="mailto:dneal@cse.msstate.edu">dneal@cse.msstate.edu</a></p>
+              </section>
+            </div>
+            
+  
+  
+            <section class="syllabus">
+              <h2>Syllabus</h2>
+              <div class="syllabus-content">
+                <object data="/syllabi/CPO_Fall2023_Syllabus.pdf" type="application/pdf" width="60%" height="1000px">
+                  <p>Your browser does not support PDFs.
+                    <a href="/syllabi/CPO_Fall2023_Syllabus.pdf">Download</a>
+                  </p>
+                </object>
+              </div>
+  
+            </section>
+          </div>
+        </div>
+  
+        <aside class="sidebar">
+          <div class="quick-links">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="https://cse.msstate.edu" target="_blank">CSE Department</a></li>
+                  <li><a href="https://canvas.msstate.edu" target="_blank">Canvas</a></li>
+                  <li><a href="https://my.msstate.edu" target="_blank">myState</a></li>
+    
+              </ul>
+          </div>
+          <div class="contact-us">
+              <h3>Contact Us</h3>
+              <p>Department of Computer Science and Engineering<br>
+                  665 George Perry Street<br>
+                  300 Butler Hall<br>
+                  Box 9637<br>
+                  Mississippi State, MS 39762<br>
+                  Email: <a href="mailto:office@cse.msstate.edu">office@cse.msstate.edu</a><br>
+                  Phone: (662) 325-2756
+              </p>
+          </div>
+          <div class="about-container">
+            <h3>About</h3>
+            <p>
+              As the creator of this website, my vision was to enhance the learning experience for CSE students here at MSU. The goal was and
+              still is to fill in the gaps left from classes due to strict college schedules and offer supplemental material to enhance students'
+              performance, not only in the classroom, but in personal programming experiences as well.
+            </p>
+          </div>
+       </aside>
+      </div>
+
+    </body>
