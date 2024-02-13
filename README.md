@@ -4,11 +4,9 @@ Welcome to the repository for the CSE and Linux Resources on behalf of the CSE d
 ## Communication
 As the sole contributor to this project, please feel free to contact me for information regarding this project.
 
-Email: stephenproctor291@gmail.com
-
-Discord: swperb
-
-![GitHub Issues](https://github.com/swperb/CSE-Linux-Resources/issues)
+* Email: stephenproctor291@gmail.com
+* Discord: swperb
+* ![GitHub Issues](https://github.com/swperb/CSE-Linux-Resources/issues)
 
 ## User Manual
 Upon navigating to the website, you will be greeted with the homepage.
