@@ -46,3 +46,18 @@ function moveSlide(step) {
 
 setInterval(() => moveSlide(1), 5000);
 
+document.getElementById('loginForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    // Simulate authentication logic (replace with actual authentication code)
+    if (email === 'example@example.com' && password === 'password') {
+        // Redirect to dashboard or protected page
+        window.location.href = 'index.html';
+    } else {
+        // Display error message
+        document.getElementById('error').innerText = 'Invalid email or password';
+    }
+});
