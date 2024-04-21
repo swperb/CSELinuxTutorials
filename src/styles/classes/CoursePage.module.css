@@ -1,0 +1,25 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.courseDetails {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-left: 20px;
+}
+
+.instructor {
+    grid-column: 2 / 2;
+    grid-row: 1 / 2;
+    margin-left: 50px;
+}
+
+.syllabus {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}

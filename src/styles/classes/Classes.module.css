@@ -1,0 +1,73 @@
+/* pages/classes/Classes.module.css */
+  
+  .h1 {
+    display: flex;
+    justify-content: center;
+    padding-left: 55px;
+  }
+  
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(250px, 1fr));
+    justify-content: center;
+    gap: 20px; /* Adjust based on your preference */
+    padding: 40px;
+  }
+  
+  .pill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    background-color: #5D1725; /* Example color, adjust as needed */
+    color: white;
+    padding: 30px;
+    border-radius: 9999px; /* Creates the pill shape */
+    width: 100%; /* Adjust based on your preference */
+    max-width: 300px;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Optional: if you want the divs to be clickable */
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .pill:hover {
+    transform: scale(1.05); /* Slight scale effect on hover */
+  }
+  
+  .pill h2 {
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    text-decoration: none;
+  }
+  
+  .pill p {
+    margin: 10px 0 0;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .categories {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+  }
+
+  /* Classes.module.css additions */
+.backArrow {
+    display: inline-block;
+    color: #5D1729; /* Maroon color */
+    font-size: 24px; /* Adjust size as necessary */
+    padding: 20px; /* Adjust padding as necessary */
+    position: absolute; /* Adjust based on your layout */
+    top: 0; /* Adjust if you have a header */
+    left: 0;
+    text-decoration: none; /* Removes underline from link */
+  }
+  
+  

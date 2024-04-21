@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "name": "Josh Crowson",
+        "email": "crowson@cse.msstate.edu",
+        "officeHours": "MWF 10:00-11:00",
+        "officeLocation": "Butler 209",
+        "phone": "662-325-2756",
+        "courses": [
+            {
+                "courseId": "1284",
+                "syllabus": "/syllabi/CSE1284_Spring21_syllabus.pdf"
+            },
+            {
+                "courseId": "1384",
+                "syllabus": "/syllabi/CSE1284_Spring21_syllabus.pdf"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Aubrey Knight",
+        "email": "knight@cse.msstate.edu",
+        "officeHours": ["MW 8:15-9:30, 12:00-1:30, 3:30-4:30", "TR 8:15-11:15, 2:30-4:30"],
+        "officeLocation": "Butler 215",
+        "phone": "662-325-8922",
+        "syllabus": ["/CSE 1384 (3).pdf", "/CSE 3183 Syllabus S24 (1).pdf"],
+        "courses": [
+            {
+                "courseId": "1384",
+                "syllabus": "/syllabi/CSE 1384 (3).pdf"
+            },
+            {
+                "courseId": "3183",
+                "syllabus": "/syllabi/CSE 3183 Syllabus S24 (1).pdf"
+            }
+        ]
+    }
+]
