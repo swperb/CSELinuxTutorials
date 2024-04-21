@@ -1,0 +1,12 @@
+[
+    {
+        "id": "1284",
+        "name": "Introduction to Computer Programming",
+        "description": "This course is an introduction to computer programming using the Python programming language. The course will cover the basics of programming, including variables, data types, control structures, functions, and object-oriented programming. Students will learn how to write programs to solve problems, and will gain experience with debugging and testing programs. The course will also cover basic algorithms and data structures, and will introduce students to the principles of software engineering."
+    },
+    {
+        "id": "1384",
+        "name": "Intermediate Computer Programming",
+        "description": "This course is an intermediate-level course in computer programming using the Python programming language. The course will cover more advanced topics in programming, including object-oriented programming, data structures, algorithms, and software engineering. Students will learn how to write programs that are more complex and efficient, and will gain experience with debugging and testing programs. The course will also cover more advanced algorithms and data structures, and will introduce students to the principles of software design and development."
+    }
+]

@@ -1,0 +1,35 @@
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.heading {
+    color: #333;
+    text-align: center;
+}
+
+.instructions {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.stepTitle {
+    color: #0056b3;
+    margin-top: 30px;
+}
+
+.codeBlock {
+    background-color: #f5f5f5;
+    border-left: 3px solid #0056b3;
+    padding: 10px;
+    font-family: monospace;
+    display: block;
+    margin: 10px 0;
+}
+
+.finalNote {
+    font-style: italic;
+    margin-top: 20px;
+}
