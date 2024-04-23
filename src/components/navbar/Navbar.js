@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { useRouter } from 'next/router';
-import styles from '@/styles/components/Navbar.module.css';
+import styles from '@/components/navbar/Navbar.module.css';
 
 const Navbar = () => {
     
@@ -27,13 +27,6 @@ const Navbar = () => {
                     <Link href='/tutorials'>Tutorials</Link>
                 </li>
             </ul>
-
-            <button onClick={handleLogin} className={styles.login}>Admin? Login Here</button>
-
-            <div className={styles.search}>
-                <input type='text' placeholder='Search' />
-                <button type='submit' >Search</button>
-            </div>
         </nav>
     );
 };
