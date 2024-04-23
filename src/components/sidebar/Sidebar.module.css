@@ -1,13 +1,15 @@
 .sidebar {
-    grid-row: 3 / 4;
-    grid-column: 2 / 3;
-    padding-top: 20px;
+    max-width: 250px;
+    min-width: 250px;
+    padding: 20px;
+    box-sizing: border-box;
   }
   
   .quick, .contact, .about {
     background-color: #f4f4f4;
     padding: 15px;
     margin-bottom: 20px;
+    font-size: 12px;
   }
   
   .quick h3, .contact h3, .about h3 {
@@ -36,11 +38,4 @@
   
   .about p{
     font-size: 1.1em;
-  }
-  
-  @media (max-width: 768px) {
-  
-    .sidebar {
-        width: 100%;
-    }
   }

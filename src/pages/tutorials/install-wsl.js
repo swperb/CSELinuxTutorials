@@ -1,4 +1,4 @@
-import Layout from '@/components/Layout';
+import Layout from '@/components/layout/Layout';
 import styles from '@/styles/tutorials/InstallWSL.module.css';
 
 export default function InstallWSL2() {
@@ -19,16 +19,16 @@ export default function InstallWSL2() {
                 <code className={styles.codeBlock}>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart</code>
 
                 <h2 className={styles.stepTitle}>Step 4: Download the Linux Kernel Update Package</h2>
-                <p className={styles.instructions}>Download and install the WSL2 Linux kernel update package from Microsoft's official website.</p>
+                <p className={styles.instructions}>Download and install the WSL2 Linux kernel update package from Microsoft&apos;s official website.</p>
 
                 <h2 className={styles.stepTitle}>Step 5: Set WSL2 as Your Default Version</h2>
                 <p className={styles.instructions}>Open PowerShell and run:</p>
                 <code className={styles.codeBlock}>wsl --set-default-version 2</code>
 
                 <h2 className={styles.stepTitle}>Step 6: Install Your Linux Distribution of Choice</h2>
-                <p className={styles.instructions}>Open the Microsoft Store, select your favorite Linux distribution, and click "Install".</p>
+                <p className={styles.instructions}>Open the Microsoft Store, select your favorite Linux distribution, and click &quot;Install&quot;.</p>
 
-                <p className={styles.finalNote}>After installation, launch your Linux distribution by clicking the "Launch" button, or by searching for your distribution name in the start menu.</p>
+                <p className={styles.finalNote}>After installation, launch your Linux distribution by clicking the &quot;Launch&quot; button, or by searching for your distribution name in the start menu.</p>
             </div>
     );
 }

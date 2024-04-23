@@ -1,9 +1,10 @@
 // components/MyCarousel.js
 import React from 'react';
 import Slider from 'react-slick';
+import styles from '@/components/carousel/Carousel.module.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import styles from '@/styles/components/Carousel.module.css';
+
 
 const Carousel = () => {
   const settings = {
@@ -15,12 +16,12 @@ const Carousel = () => {
     autoplay: true,
     autoplaySpeed: 4500,
     arrows: true,
-    fade: false,
+    fade: false
   };
 
   return (
     <div className={styles.carousel}>
-      <Slider {...settings}>
+      <Slider {...settings} className={styles.slide}>
         <div>
           <img src="/penguin-159784_1280.png" alt="Slide 1"  />
         </div>

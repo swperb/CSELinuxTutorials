@@ -1,5 +1,5 @@
-import Layout from "@/components/Layout";
-import Carousel from "@/components/Carousel";
+import Layout from "@/components/layout/Layout";
+import Carousel from "@/components/carousel/Carousel";
 import React from "react";
 
 import styles from "@/styles/Home.module.css";
@@ -7,7 +7,7 @@ import styles from "@/styles/Home.module.css";
 export default function Home() {
   return (
     <>
-    {/* <Carousel /> */}
+    <div className={styles.carousel}><Carousel /></div>
 
     <h2 className={styles.body}>Welcome</h2>
     <p className={styles.p}>

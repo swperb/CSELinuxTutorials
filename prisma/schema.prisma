@@ -1,0 +1,37 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model courses {
+  id          BigInt  @id @default(autoincrement())
+  course_id   Int     @db.SmallInt
+  name        String?
+  description String?
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model instructors {
+  id             Int       @id @default(autoincrement()) @db.SmallInt
+  name           String?
+  email          String?
+  officeHours    String[]
+  officeLocation String?
+  phone          String?
+  courses        String[]
+  syllabi        syllabi[]
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model syllabi {
+  id            BigInt       @id @default(autoincrement())
+  filePath      String?
+  course_id     Int?         @db.SmallInt
+  instructor_id Int?         @db.SmallInt
+  instructors   instructors? @relation(fields: [instructor_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "public_syllabi_instructor_id_fkey")
+}

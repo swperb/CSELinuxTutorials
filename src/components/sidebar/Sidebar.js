@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import styles from '@/styles/components/Sidebar.module.css';
+import styles from '@/components/sidebar/Sidebar.module.css';
 
 const Sidebar = () => {
     return (
@@ -29,7 +29,7 @@ const Sidebar = () => {
                 <h3>About</h3>
                 <p>
                     As the creator of this website, my vision was to enhance the learning experience for CSE students here at MSU. The goal was and
-                    still is to fill in the gaps left from classes due to strict college schedules and offer supplemental material to enhance students'
+                    still is to fill in the gaps left from classes due to strict college schedules and offer supplemental material to enhance students&apos;
                     performance, not only in the classroom, but in personal programming experiences as well.
                 </p>
             </div>
