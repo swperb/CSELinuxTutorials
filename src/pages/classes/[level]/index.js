@@ -1,3 +1,4 @@
+import BackArrow from '@/components/backArrow/backArrow';
 import styles from '@/styles/classes/Classes.module.css';
 import Link from 'next/link';
 
@@ -40,8 +41,11 @@ export async function getServerSideProps(req, res) {
 
 export default function Courses({ courses, lowerBound, upperBound }) {
 
+  courses.sort((a, b) => a.course_id - b.course_id)
+
     return (
-        <div className={styles.container}>
+      <div className={styles.container}>
+        <BackArrow className={styles.backArrow} />
         <h1 className={styles.h1}>Classes {lowerBound}-{upperBound}</h1>
         <div className={styles.categories}>
           {courses.map((course) => (
