@@ -1,6 +1,7 @@
 // pages/classes/index.js
 import Link from 'next/link';
-import styles from '@/styles/classes/Classes.module.css'; // Assuming you'll use CSS Modules for styling
+import BackArrow from '@/components/backArrow/backArrow';
+import styles from '@/styles/classes/Categories.module.css'; // Assuming you'll use CSS Modules for styling
 
 const ClassCategories = [
   { id: 1, title: 'CSE 1000-1999', description: 'Freshman Level Courses', link: '/classes/1000' },
@@ -12,6 +13,7 @@ const ClassCategories = [
 export default function Classes() {
   return (
     <div className={styles.container}>
+      <BackArrow className={styles.backArrow} />
       <h1 className={styles.h1}>Class Categories</h1>
       <div className={styles.categories}>
         {ClassCategories.map((category) => (

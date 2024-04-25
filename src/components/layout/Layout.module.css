@@ -12,3 +12,14 @@
 .sidebar {
     flex: right;
 }
+
+
+@media (max-width: 992px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        flex-grow: 1;
+    }
+}
