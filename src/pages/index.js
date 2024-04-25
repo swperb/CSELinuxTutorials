@@ -3,7 +3,6 @@ import Carousel from "@/components/carousel/Carousel";
 import React from "react";
 
 import styles from "@/styles/Home.module.css";
-import { Main } from "next/document";
 
 export default function Home() {
   return (
