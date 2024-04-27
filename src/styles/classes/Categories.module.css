@@ -1,11 +1,11 @@
 /* pages/classes/Classes.module.css */
-
-.h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
+  .h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 65px;
+  }
   
   .categories {
     display: grid;
@@ -26,7 +26,7 @@
     padding: 30px;
     border-radius: 9999px; /* Creates the pill shape */
     width: 100%; /* Adjust based on your preference */
-    max-width: 300px;
+    max-width: 250px;
     box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
     cursor: pointer; /* Optional: if you want the divs to be clickable */
     transition: transform 0.2s ease-in-out;
