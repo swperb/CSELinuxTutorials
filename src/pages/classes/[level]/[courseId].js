@@ -1,3 +1,4 @@
+import BackArrow from '@/components/backArrow/backArrow';
 import styles from '@/styles/classes/CoursePage.module.css';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -24,13 +25,16 @@ export async function getServerSideProps(req, res) {
     const instructors = await prisma.instructors.findMany({
         where: {
             courses:{
-                has: courseId
+                has: parseInt(courseId)
             }
         },
         select: {
             id: true,
             name: true,
-            email: true
+            email: true,
+            phone: true,
+            officeHours: true,
+            officeLocation: true
         }
     })
 
@@ -57,11 +61,14 @@ export async function getServerSideProps(req, res) {
 export default function CoursePage({ course, instructors, syllabi }) {
     
     const [instructor, setInstructor] = useState([])
-    const [syllabus, setSyllabus] = useState([])
+    const [syllabus, setSyllabus] = useState(null)
 
     useEffect(() => {
-        setInstructor(instructors[0])
-        setSyllabus(syllabi[instructors[0].id])
+        if (instructors.length > 0) {
+            setInstructor(instructors[0]);
+            const initialSyllabus = syllabi.find(syll => syll.instructor_id === instructors[0].id);
+            setSyllabus(initialSyllabus);
+        }
     }, [instructors, syllabi])
 
     const handleInstructorChange = (e) => {
@@ -69,25 +76,41 @@ export default function CoursePage({ course, instructors, syllabi }) {
         setInstructor(selectedInstructor)
 
         const selectedSyllabus = syllabi.find(syllabus => syllabus.instructor_id === selectedInstructor.id)
-        setSyllabus(selectedSyllabus)
+        setSyllabus(selectedSyllabus || null)
     }
 
 
     return (
         <div className={styles.container}>
-            <h1 className={styles.h1}>CSE {course[0].course_id}: {course[0].name}</h1>
-            <p>{course[0].description}</p>
-            <h2>Instructors</h2>
-            <select onChange={handleInstructorChange}>
-                {instructors.map(instructor => (
-                    <option key={instructor.email} value={instructor.name}>{instructor.name}</option>
-                ))}
-            </select>
-            <div className={styles.instructor}>
-                <p>{instructor.name}</p>
-                <p>{instructor.email}</p>
+            <BackArrow className={styles.backArrow} />
+            <div className={styles.topContainer}>
+                <div className={styles.title}>
+                    <h1 className={styles.h1}>CSE {course[0].course_id}: {course[0].name}</h1>
+                    <p>{course[0].description}</p>
+                </div>
+                <div className={styles.instructor}>
+                    <div className={styles.instructorHeader}>
+                        <h2>Instructors</h2>
+                        <select onChange={handleInstructorChange}>
+                            {instructors.map(instructor => (
+                                <option key={instructor.email} value={instructor.name}>{instructor.name}</option>
+                            ))}
+                        </select>
+                    </div>
+                    <p><b>{instructor.name}</b></p>
+                    <p>Email: <a href={`mailto:${instructor.email}`}>{instructor.email}</a></p>
+                    <p>Phone: <a href={`tel:${instructor.phone}`}>{instructor.phone}</a></p>
+                </div>
             </div>
-            <iframe src={syllabus.filePath} width="50%" height="500px"></iframe>
+            <div className={styles.syllabusContainer}>
+                {syllabus ? (
+                    <iframe src={syllabus.filePath} className={styles.syllabus}></iframe>
+                ) : (
+                    <p>Syllabus does not exist.</p>
+                )}
+            </div>
+
+            {/* <iframe src={syllabus.filePath} width="50%" height="500px"></iframe> */}
         </div>
     )
 

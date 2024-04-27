@@ -82,6 +82,18 @@
 }
 
 
+@media (max-width: 768px) {
+  .nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+  }
+
+}
+
 
 
   /* .search-results-dropdown {

@@ -23,7 +23,7 @@ model instructors {
   officeHours    String[]
   officeLocation String?
   phone          String?
-  courses        String[]
+  courses        Int[]     @db.SmallInt
   syllabi        syllabi[]
 }
 
