@@ -1,13 +1,9 @@
-// pages/classes/index.js
 import Link from 'next/link';
 import BackArrow from '@/components/backArrow/backArrow';
 import styles from '@/styles/classes/Categories.module.css'; // Assuming you'll use CSS Modules for styling
 
 const ClassCategories = [
-  { id: 1, title: 'CSE 1000-1999', description: 'Freshman Level Courses', link: '/classes/1000' },
-  { id: 2, title: 'CSE 2000-2999', description: 'Sophomore Level Courses', link: '/classes/2000'},
-  { id: 3, title: 'CSE 3000-3999', description: 'Junior Level Courses', link: '/classes/3000'},
-  { id: 4, title: 'CSE 4000-4999', description: 'Senior Level Courses', link: '/classes/4000'},
+  { id: 1, title: 'Install WSL', description: 'Learn how to install WSL', link: '/tutorials/installwsl' },
 ];
 
 export default function Classes() {

@@ -1,4 +1,3 @@
-import Layout from '@/components/layout/Layout';
 import styles from '@/styles/tutorials/InstallWSL.module.css';
 
 export default function InstallWSL2() {

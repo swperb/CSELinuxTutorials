@@ -2,9 +2,7 @@ import BackArrow from '@/components/backArrow/backArrow';
 import styles from '@/styles/classes/Classes.module.css';
 import Link from 'next/link';
 
-const { PrismaClient } = require('@prisma/client')
-
-const prisma = new PrismaClient()
+import { prisma } from '@/_base';
 
 export async function getServerSideProps(req, res) {
 
@@ -49,7 +47,7 @@ export default function Courses({ courses, lowerBound, upperBound }) {
         <h1 className={styles.h1}>Classes {lowerBound}-{upperBound}</h1>
         <div className={styles.categories}>
           {courses.map((course) => (
-            <Link key={course.id} href={`/classes/${lowerBound}/${course.course_id}`} passHref>
+            <Link key={course.id} href={`/classes/${lowerBound}/${course.course_id}`} className={styles.link} passHref>
               <div className={styles.pill}>
                   <h2>CSE {course.course_id}</h2>
                   <p>{course.name}</p>

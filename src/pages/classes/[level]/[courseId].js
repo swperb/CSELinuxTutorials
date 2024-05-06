@@ -1,11 +1,12 @@
 import BackArrow from '@/components/backArrow/backArrow';
+import EditableText from '@/components/EditableText/EditableText';
 import styles from '@/styles/classes/CoursePage.module.css';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-const { PrismaClient } = require('@prisma/client')
+import { useUser } from '@auth0/nextjs-auth0/client';
 
-const prisma = new PrismaClient()
+import { prisma } from '@/_base';
 
 export async function getServerSideProps(req, res) {
 
@@ -59,9 +60,12 @@ export async function getServerSideProps(req, res) {
 }
 
 export default function CoursePage({ course, instructors, syllabi }) {
-    
-    const [instructor, setInstructor] = useState([])
+
+    const [instructor, setInstructor] = useState(instructors);
     const [syllabus, setSyllabus] = useState(null)
+
+    const [courseData, setCourseData] = useState(course[0]);
+    const [instructorData, setInstructorData] = useState(instructor[0]);
 
     useEffect(() => {
         if (instructors.length > 0) {
@@ -74,9 +78,49 @@ export default function CoursePage({ course, instructors, syllabi }) {
     const handleInstructorChange = (e) => {
         const selectedInstructor = instructors.find(instructor => instructor.name === e.target.value)
         setInstructor(selectedInstructor)
+        setInstructorData(selectedInstructor)
 
         const selectedSyllabus = syllabi.find(syllabus => syllabus.instructor_id === selectedInstructor.id)
         setSyllabus(selectedSyllabus || null)
+    }
+
+    
+    const handleSaveCourseData = async (fieldName, newValue) => {
+        const oldValue = course[fieldName];
+
+        setCourseData(prevCourse => ({ ...prevCourse, [fieldName]: newValue }));
+
+        const response = await fetch('/api/classes/updateCourse', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ courseId: course[0].course_id, fieldName: fieldName, newValue: newValue})
+        });
+
+        if (!response.ok) {
+            setCourseData(prevCourse => ({ ...prevCourse, [fieldName]: oldValue }));
+            alert('Failed to update course name.');
+        }
+    };
+
+    const handleSaveInstructorData = async (fieldName, newValue) => {
+        const oldValue = instructor[fieldName];
+
+        setInstructorData(prevInstructor => ({ ...prevInstructor, [fieldName]: newValue }));
+
+        const response = await fetch('/api/classes/updateInstructor', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ instructorId: instructor.id, fieldName: fieldName, newValue: newValue})
+        });
+
+        if (!response.ok) {
+            setInstructorData(prevInstructor => ({ ...prevInstructor, [fieldName]: oldValue }));
+            alert('Failed to update instructor information.');
+        }
     }
 
 
@@ -85,23 +129,46 @@ export default function CoursePage({ course, instructors, syllabi }) {
             <BackArrow className={styles.backArrow} />
             <div className={styles.topContainer}>
                 <div className={styles.title}>
-                    <h1 className={styles.h1}>CSE {course[0].course_id}: {course[0].name}</h1>
-                    <p>{course[0].description}</p>
+
+                    <h1>
+                        <div className={styles.courseId}>
+                            CSE {course[0].course_id}:
+                        </div>
+                        <EditableText text={courseData.name} className={styles.editableCourseName} onSave={(newValue) => handleSaveCourseData('name', newValue)}/>
+                    </h1>
+                    <div className={styles.description}>
+                        <EditableText text={courseData.description} className={styles.editableDesc} onSave={(newValue) => handleSaveCourseData('description', newValue)} />
+                    </div>
+                
                 </div>
                 <div className={styles.instructor}>
                     <div className={styles.instructorHeader}>
-                        <h2>Instructors</h2>
+                        
+                        
+                        <h1>Instructors</h1>
                         <select onChange={handleInstructorChange}>
                             {instructors.map(instructor => (
                                 <option key={instructor.email} value={instructor.name}>{instructor.name}</option>
                             ))}
                         </select>
+                    
+                    
+                    </div>
+
+                    <div className={styles.instructorName}>
+                        <EditableText text={instructorData.name} className={styles.editableInstructorName} onSave={(newValue) => handleSaveInstructorData('name', newValue)} />
                     </div>
                     <p><b>{instructor.name}</b></p>
+                    
+                    
                     <p>Email: <a href={`mailto:${instructor.email}`}>{instructor.email}</a></p>
                     <p>Phone: <a href={`tel:${instructor.phone}`}>{instructor.phone}</a></p>
+                
+                
                 </div>
             </div>
+            
+            
             <div className={styles.syllabusContainer}>
                 {syllabus ? (
                     <iframe src={syllabus.filePath} className={styles.syllabus}></iframe>
