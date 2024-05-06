@@ -15,3 +15,26 @@
     border-bottom: 1px solid #ddd;
     padding-bottom: 8px;
 }
+
+.searchForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .searchInput {
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .searchButton {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 14px;
+  }
