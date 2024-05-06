@@ -81,6 +81,37 @@ textarea.editableDesc {
     margin-top: 5px;
 }
 
+.instructorName {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.editableInstructorName {
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+    font-family: "Noto Sans", sans-serif;
+}
+
+textarea.editableInstructorName {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    resize: none;
+    scrollbar-width: none;
+}
+
+.instructorInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.instructorInfo p {
+    text-wrap: nowrap;
+}
+
+
 .syllabus {
     width: 60%;
     height: 100vh;
