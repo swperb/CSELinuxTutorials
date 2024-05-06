@@ -158,11 +158,13 @@ export default function CoursePage({ course, instructors, syllabi }) {
                     <div className={styles.instructorName}>
                         <EditableText text={instructorData.name} className={styles.editableInstructorName} onSave={(newValue) => handleSaveInstructorData('name', newValue)} />
                     </div>
-                    <p><b>{instructor.name}</b></p>
                     
-                    
-                    <p>Email: <a href={`mailto:${instructor.email}`}>{instructor.email}</a></p>
-                    <p>Phone: <a href={`tel:${instructor.phone}`}>{instructor.phone}</a></p>
+                    <div className={styles.instructorInfo}>
+                        <p>Email: <a href={`mailto:${instructor.email}`}>{instructor.email}</a></p>
+                        <p>Phone: <a href={`tel:${instructor.phone}`}>{instructor.phone}</a></p>
+                        <p>Office Location: {instructor.officeLocation}</p>
+                        <p>Office Hours: {instructor.officeHours}</p>
+                    </div>
                 
                 
                 </div>
