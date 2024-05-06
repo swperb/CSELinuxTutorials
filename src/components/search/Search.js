@@ -6,21 +6,21 @@ export default function Search() {
     const [query, setQuery] = useState('');
     const router = useRouter();
 
-    const searchPosts = (e) => {
+    const search = (e) => {
         e.preventDefault();
         router.push(`/search?query=${query}`);
     };
 
     return (
-        <form onSubmit={searchPosts} className={styles.form}>
+        <form onSubmit={search} className={styles.searchForm}>
             <input
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search posts..."
-                className={styles.input}
+                placeholder="Search"
+                className={styles.searchInput}
             />
-            <button type="submit" className={styles.button}>Search</button>
+            <button type="submit" className={styles.searchButton}>Search</button>
         </form>
     );
 }
