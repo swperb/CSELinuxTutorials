@@ -21,7 +21,7 @@ export default function SearchResults() {
 
     return (
         <div className={styles.container}>
-            <h1>Search Results for "{query}"</h1>
+            <h1>Search Results for &quot;{query}&quot;</h1>
             <ul className={styles.results}>
                 {results.length > 0 ? (
                     results.map(course => (
