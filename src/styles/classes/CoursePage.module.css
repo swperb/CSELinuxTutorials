@@ -1,13 +1,70 @@
+.editableCourseName {
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+    font-family: "Noto Sans", sans-serif;
+}
+
+textarea.editableCourseName {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 750px;
+    height: 42px;
+    resize: none;
+    scrollbar-width: none;
+}
+
+.title h1 {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+
+}
+
+.courseId {
+    padding-right: 10px;
+}
+
+.editableDesc {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Noto Sans", sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    resize: none;
+}
+
+textarea.editableDesc {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 1000px;
+    height: 100px;
+}
+
+.description {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20px;
+    width: 60%;
+}
+
 .topContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    padding-left: 100px;
+    padding-right: 300px;
     margin-bottom: 100px;
-}
-
-.title {
-    padding-right: 50px;
 }
 
 .instructorHeader {
@@ -16,7 +73,7 @@
     align-items: center;
 }
 
-.instructorHeader h2 {
+.instructorHeader h1 {
     padding-right: 20px;
 }
 

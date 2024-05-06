@@ -4,6 +4,7 @@ import Sidebar from "../sidebar/Sidebar";
 import React from "react";
 
 import styles from "@/components/layout/Layout.module.css";
+import ContactUsButton from "../ContactUsButton/ContactUsButton";
 
 
 const Layout = ({ children }) => {
@@ -16,6 +17,8 @@ const Layout = ({ children }) => {
             
                 <main className={styles.main}>{children}</main>
                 <div className={styles.sidebar}><Sidebar /></div>
+
+                <ContactUsButton />
             </div>
         </>
     );

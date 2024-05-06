@@ -3,16 +3,19 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 /// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
 model courses {
-  id          BigInt  @id @default(autoincrement())
-  course_id   Int     @db.SmallInt
+  id          Int     @default(autoincrement()) @db.SmallInt
+  course_id   Int     @unique @db.SmallInt
   name        String?
   description String?
+
+  @@id([id, course_id])
 }
 
 /// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
@@ -33,5 +36,15 @@ model syllabi {
   filePath      String?
   course_id     Int?         @db.SmallInt
   instructor_id Int?         @db.SmallInt
+  name          String?
   instructors   instructors? @relation(fields: [instructor_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "public_syllabi_instructor_id_fkey")
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model contact_forms {
+  id      BigInt   @id @default(autoincrement())
+  sent_at DateTime @default(now()) @db.Timestamptz(6)
+  name    String?
+  email   String?
+  message String?
 }

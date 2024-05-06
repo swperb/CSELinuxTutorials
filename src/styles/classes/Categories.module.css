@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-left: 65px;
   }
   
   .categories {
@@ -13,6 +12,16 @@
     justify-content: center;
     gap: 20px; /* Adjust based on your preference */
     padding: 40px;
+  }
+
+  .categories a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .link {
+    text-decoration: none;
   }
   
   .pill {
@@ -25,8 +34,8 @@
     color: white;
     padding: 30px;
     border-radius: 9999px; /* Creates the pill shape */
-    width: 100%; /* Adjust based on your preference */
-    max-width: 250px;
+    width: 250px;
+    height: 50px;
     box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
     cursor: pointer; /* Optional: if you want the divs to be clickable */
     transition: transform 0.2s ease-in-out;
@@ -51,12 +60,32 @@
   }
 
   @media (max-width: 768px) {
-    .categories {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
+  .categories {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding-top: 20px;
   }
+
+  .h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-left: 0;
+  }
+
+  .pill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+  }
+}
   
   

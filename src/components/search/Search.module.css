@@ -1,0 +1,17 @@
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 16px;
+}
+
+.results {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resultItem {
+    margin-bottom: 16px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
