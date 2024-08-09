@@ -1,5 +1,5 @@
 // components/InstructorSelector.js
-const InstructorSelector = ({ instructors, onSelect }) => (
+export default function InstructorSelector({ instructors, onSelect }) {
     <select onChange={e => onSelect(e.target.value)}>
       {instructors.map(instructor => (
         <option key={instructor.id} value={instructor.id}>
@@ -7,7 +7,5 @@ const InstructorSelector = ({ instructors, onSelect }) => (
         </option>
       ))}
     </select>
-  );
-  
-  export default InstructorSelector;
+  };
   

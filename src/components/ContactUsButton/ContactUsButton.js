@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './ContactUsButton.module.css';
 
-const ContactUsButton = () => {
+export default function ContactUsButton() {
 
     const [isOpen, setIsOpen] = useState(false);
     const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -108,5 +108,3 @@ const ContactUsButton = () => {
         </div>
     );
 };
-
-export default ContactUsButton;

@@ -4,7 +4,7 @@ import { useUser } from '@auth0/nextjs-auth0/client';
 
 import styles from '@/components/EditableText/EditableText.module.css';
 
-const EditableText = ({ text, onSave, className }) => {
+export default function EditableText({ text, onSave, className }){
 
     const { user } = useUser();
 
@@ -41,5 +41,3 @@ const EditableText = ({ text, onSave, className }) => {
 
     
 };
-
-export default EditableText;

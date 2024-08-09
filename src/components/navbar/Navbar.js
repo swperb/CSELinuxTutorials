@@ -5,7 +5,7 @@ import styles from '@/components/navbar/Navbar.module.css';
 
 import { useUser } from '@auth0/nextjs-auth0/client';
 
-const Navbar = () => {
+export default function Navbar(){
     
     const router = useRouter();
     const { user } = useUser();
@@ -47,6 +47,3 @@ const Navbar = () => {
         </nav>
     );
 };
-
-
-export default Navbar;

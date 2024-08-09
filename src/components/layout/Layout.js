@@ -8,7 +8,7 @@ import styles from "@/components/layout/Layout.module.css";
 import ContactUsButton from "../ContactUsButton/ContactUsButton";
 
 
-const Layout = ({ children }) => {
+export default function Layout({ children }){
     return (
     <>
             <Header />
@@ -26,5 +26,3 @@ const Layout = ({ children }) => {
         </>
     );
 };
-
-export default Layout;
