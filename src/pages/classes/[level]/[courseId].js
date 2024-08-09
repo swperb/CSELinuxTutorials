@@ -1,5 +1,5 @@
 import BackArrow from '@/components/backArrow/backArrow';
-import EditableText from '@/components/EditableText/EditableText';
+import EditableText from '@/components/editableText/EditableText';
 import styles from '@/styles/classes/CoursePage.module.css';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';

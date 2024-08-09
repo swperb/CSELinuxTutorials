@@ -1,5 +1,5 @@
 import Layout from "@/components/layout/Layout";
-import Carousel from "@/components/carousel/Carousel";
+import Carousel from "@/components/Carousel/Carousel";
 import React from "react";
 
 import styles from "@/styles/Home.module.css";
