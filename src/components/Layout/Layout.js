@@ -4,7 +4,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import Footer from "../Footer/Footer";
 import React from "react";
 
-import styles from "@/components/layout/Layout.module.css";
+import styles from "@/components/Layout/Layout.module.css";
 import ContactUsButton from "../contactUsButton/ContactUsButton";
 
 

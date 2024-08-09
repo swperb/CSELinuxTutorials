@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from '@/components/footer/Footer.module.css';
+import styles from '@/components/Footer/Footer.module.css';
 import { useRouter } from 'next/router';
 import Search from '../Search/Search';
 

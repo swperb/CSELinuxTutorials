@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import React from 'react';
 import Slider from 'react-slick';
-import styles from '@/components/carousel/Carousel.module.css';
+import styles from '@/components/Carousel/Carousel.module.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 

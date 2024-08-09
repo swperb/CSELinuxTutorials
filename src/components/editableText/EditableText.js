@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { useUser } from '@auth0/nextjs-auth0/client';
 
-import styles from '@/components/EditableText/EditableText.module.css';
+import styles from '@/components/editableText/EditableText.module.css';
 
 export default function EditableText({ text, onSave, className }){
 

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from '@/components/header/Header.module.css';
+import styles from '@/components/Header/Header.module.css';
 import { useRouter } from 'next/router';
 import Search from '../Search/Search';
 

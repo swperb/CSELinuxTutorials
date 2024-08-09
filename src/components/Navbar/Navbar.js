@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { useRouter } from 'next/router';
-import styles from '@/components/navbar/Navbar.module.css';
+import styles from '@/components/Navbar/Navbar.module.css';
 
 import { useUser } from '@auth0/nextjs-auth0/client';
 
