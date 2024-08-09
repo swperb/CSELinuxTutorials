@@ -1,4 +1,5 @@
 // components/MyCarousel.js
+import Image from 'next/image';
 import React from 'react';
 import Slider from 'react-slick';
 import styles from '@/components/carousel/Carousel.module.css';
@@ -23,10 +24,11 @@ const Carousel = () => {
     <div className={styles.carousel}>
       <Slider {...settings} className={styles.slide}>
         <div>
-          <img src="/penguin-159784_1280.png" alt="Slide 1"  />
+          // Image component from Next.js for optimized images
+          <Image src="/penguin-159784_1280.png" alt="Slide 1" width={1920} height={1080}/>
         </div>
         <div>
-          <img src="/code-1839406_1280.jpg" alt="Slide 2"  />
+          <Image src="/code-1839406_1280.jpg" alt="Slide 2" width={1920} height={1080}/>
         </div>
       </Slider>
     </div>
