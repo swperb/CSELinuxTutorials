@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import styles from '@/components/search/Search.module.css';
+import styles from '@/components/Search/Search.module.css';
 import Link from 'next/link';
 
 export default function SearchResults() {
