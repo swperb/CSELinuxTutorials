@@ -24,7 +24,7 @@ const Carousel = () => {
     <div className={styles.carousel}>
       <Slider {...settings} className={styles.slide}>
         <div>
-          // Image component from Next.js for optimized images
+          {/*Image component from Next.js for optimized images */}
           <Image src="/penguin-159784_1280.png" alt="Slide 1" width={1920} height={1080}/>
         </div>
         <div>
