@@ -3,7 +3,7 @@ import styles from '@/components/header/Header.module.css';
 import { useRouter } from 'next/router';
 import Search from '../search/Search';
 
-const Header = () => {
+export default function Header(){
 
     const router = useRouter();
     const [query, setQuery] = useState('');
@@ -14,6 +14,4 @@ const Header = () => {
             <Search />
         </header>
     );
-}
-
-export default Header;
+};
