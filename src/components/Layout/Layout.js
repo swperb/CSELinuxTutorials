@@ -1,11 +1,11 @@
-import Header from "../header/Header";
-import Navbar from "../navbar/Navbar";
-import Sidebar from "../sidebar/Sidebar";
-import Footer from "../footer/Footer";
+import Header from "../Header/Header";
+import Navbar from "../Navbar/Navbar";
+import Sidebar from "../Sidebar/Sidebar";
+import Footer from "../Footer/Footer";
 import React from "react";
 
 import styles from "@/components/layout/Layout.module.css";
-import ContactUsButton from "../ContactUsButton/ContactUsButton";
+import ContactUsButton from "../contactUsButton/ContactUsButton";
 
 
 export default function Layout({ children }){

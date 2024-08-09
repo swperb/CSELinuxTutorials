@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from '@/components/header/Header.module.css';
 import { useRouter } from 'next/router';
-import Search from '../search/Search';
+import Search from '../Search/Search';
 
 export default function Header(){
 
